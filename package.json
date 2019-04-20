@@ -7,9 +7,15 @@
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
     "prop-types": "^15.7.2",
     "resolve-url-loader": "^3.1.0",
+    "uikit": "^3.1.2",
     "webpack-cli": "^3.3.0"
   },
+  "scripts": {
+    "gen-typings": "yarn run tsm app/javascript/**/*.scss",
+    "watch-typings": "yarn run tsm app/javascript/**/*.scss -w"
+  },
   "devDependencies": {
+    "typed-scss-modules": "^0.0.10",
     "webpack-dev-server": "^3.3.1"
   }
 }

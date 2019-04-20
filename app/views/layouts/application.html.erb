@@ -1,16 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <title>Relay</title>
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
-
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_pack_tag 'application' %>
+  <!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.2/css/uikit.min.css" />-->
 </head>
 
 <body>
-<%= yield %>
+<nav uk-sticky="media: 960" class="uk-navbar-container rl-navbar-container rl-background-nav" uk-navbar>
+  <div class="uk-navbar-left">
+    <ul class="uk-navbar-nav">
+      <li class="uk-active"><a href="/">Relay</a></li>
+    </ul>
+  </div>
+  <div class="uk-navbar-right uk-visible@m">
+    <ul class="uk-navbar-nav">
+      <%= render 'devise/menu/registration_items' %>
+      <%= render 'devise/menu/login_items' %>
+    </ul>
+  </div>
+</nav>
+<div class="uk-container">
+  <%= yield %>
+</div>
+<%= javascript_packs_with_chunks_tag 'uikit', '__uikit', 'data-turbolinks-track': 'reload' %>
 </body>
 </html>

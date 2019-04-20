@@ -1,0 +1,31 @@
+@import "../../../node_modules/uikit/dist/css/uikit"
+
+.rl-login-box
+  .uk-text-large
+    font-weight: 300 !important
+    font-size: 2.5rem
+
+.rl-background-nav
+  background: linear-gradient(to left, #179a40, #158aa9) !important
+
+.uk-navbar-nav
+  a
+    font-size: 1.25rem !important
+    font-weight: 300
+    color: #fff !important
+    position: relative
+
+.rl-navbar-container .uk-navbar-nav > li > a::before
+  content: ''
+  display: block
+  position: absolute
+  left: 15px
+  right: calc(102% - 15px)
+  bottom: 20px
+  height: 1px
+  background-color: currentColor
+  transition: .3s ease-in-out
+  transition-property: right
+
+.rl-navbar-container .uk-navbar-nav > li > a:hover::before
+  right: 15px
