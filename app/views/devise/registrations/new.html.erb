@@ -33,7 +33,9 @@
       </div>
       <div class="uk-grid-small uk-flex uk-flex-right" uk-grid>
         <%- if controller_name != 'sessions' %>
-          <%= link_to "Log in", new_session_path(resource_name), class: "uk-button uk-button-default" %>
+          <div>
+            <%= link_to "Log in", new_session_path(resource_name), class: "uk-button uk-button-default" %>
+          </div>
         <% end %>
         <div>
           <%= f.submit "Sign up", class: "uk-button uk-button-primary" %>
